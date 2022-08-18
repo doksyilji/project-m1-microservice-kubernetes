@@ -1,1 +1,19 @@
-<paste log output from Kubernetes-mediated prediction, here>
+Login Succeeded
+deployment.apps/m1 created
+NAME                  READY   STATUS              RESTARTS   AGE
+m1-54978bb99d-8mtdr   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) ubuntu:~/environment/project-m1-microservice-kubernetes (master) $ kubectl get pod
+NAME                  READY   STATUS    RESTARTS   AGE
+m1-54978bb99d-8mtdr   1/1     Running   0          49s
+(.devops) ubuntu:~/environment/project-m1-microservice-kubernetes (master) $ ./run_kubernetes.sh 
+WARNING! Your password will be stored unencrypted in /home/ubuntu/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+error: failed to create deployment: deployments.apps "m1" already exists
+NAME                  READY   STATUS    RESTARTS   AGE
+m1-54978bb99d-8mtdr   1/1     Running   0          55s
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
