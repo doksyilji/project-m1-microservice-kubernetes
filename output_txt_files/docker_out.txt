@@ -1,1 +1,26 @@
-<paste log output from Docker prediction, here>
+Successfully built 82e1497877bd
+Successfully tagged m1:latest
+REPOSITORY                    TAG             IMAGE ID       CREATED         SIZE
+m1                            latest          82e1497877bd   1 second ago    1.19GB
+<none>                        <none>          a4c4bef5bd94   5 minutes ago   1.19GB
+gcr.io/k8s-minikube/kicbase   v0.0.33         b7ab23e98277   2 weeks ago     1.14GB
+python                        3.7.3-stretch   34a518642c76   3 years ago     929MB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 140-948-910
+[2022-08-18 16:48:35,959] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-08-18 16:48:35,973] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-08-18 16:48:35,985] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-08-18 16:48:35,989] INFO in app: Output Prediction: [20.35373177134412]
+172.17.0.1 - - [18/Aug/2022 16:48:35] "POST /predict HTTP/1.1" 200 -
